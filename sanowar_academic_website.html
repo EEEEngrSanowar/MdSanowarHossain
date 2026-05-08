@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Md Sanowar Hossain | Photonic Integrated Circuits Researcher</title>
+  <meta name="description" content="Academic portfolio of Md Sanowar Hossain, PhD student in Electrical Engineering working on photonic integrated circuits, silicon photonics, reconfigurable PICs, and optical signal processing." />
+  <style>
+    :root {
+      --navy: #00367b;
+      --blue: #0b5ed7;
+      --ink: #172033;
+      --muted: #5f6b7a;
+      --soft: #f4f7fb;
+      --card: #ffffff;
+      --line: #d9e2ef;
+      --accent: #eaf2ff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--soft);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, #001f4f, #004aa7);
+      color: white;
+      padding: 48px 0 36px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.93rem;
+    }
+
+    .nav-links a {
+      color: white;
+      opacity: 0.92;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.3rem, 5vw, 4.4rem);
+      line-height: 1.06;
+      margin-bottom: 16px;
+    }
+
+    .hero .subtitle {
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      color: #dceaff;
+      margin-bottom: 22px;
+      max-width: 780px;
+    }
+
+    .profile-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .profile-image {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid rgba(255,255,255,0.22);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.22);
+      background: rgba(255,255,255,0.15);
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.11);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 22px;
+      padding: 26px;
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-card p {
+      color: #e9f2ff;
+      margin-bottom: 12px;
+      font-size: 0.98rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    .btn.primary {
+      background: white;
+      color: var(--navy);
+    }
+
+    .btn.secondary {
+      background: rgba(255, 255, 255, 0.14);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    main {
+      padding: 42px 0 68px;
+    }
+
+    section {
+      margin-bottom: 34px;
+    }
+
+    .section-title {
+      font-size: 1.55rem;
+      color: var(--navy);
+      margin-bottom: 18px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--line);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .grid.three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 10px 28px rgba(20, 42, 80, 0.06);
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.93rem;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 7px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .tag {
+      background: var(--accent);
+      color: var(--navy);
+      border: 1px solid #cfe0ff;
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .publication {
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .publication:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .label {
+      display: inline-block;
+      background: var(--navy);
+      color: white;
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .contact-box {
+      background: white;
+      border-radius: 22px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+
+    footer {
+      background: #0d1728;
+      color: #dbe7f7;
+      padding: 26px 0;
+      text-align: center;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 860px) {
+      .hero,
+      .grid,
+      .grid.three {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Md Sanowar Hossain</div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="hero">
+        <div>
+          <h1>Photonic Integrated Circuits Researcher</h1>
+          <p class="subtitle">PhD student in Electrical Engineering at the University of North Dakota working on silicon photonics, reconfigurable PICs, optical signal processing, and microwave photonics.</p>
+          <div class="buttons">
+            <a class="btn primary" href="mailto:mdsanowar.hossain@und.edu">Email Me</a>
+            <a class="btn secondary" href="https://www.linkedin.com/in/eeeengrsanowar/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn secondary" href="#publications">View Publications</a>
+          </div>
+        </div>
+        <div class="profile-wrapper">
+          
+          <!-- Replace profile.jpg with your own image file -->
+          <img src="profile.jpg" alt="Md Sanowar Hossain" class="profile-image" />
+
+          <div class="hero-card">
+          <p><strong>Current Role:</strong> Graduate Research Assistant</p>
+          <p><strong>Institution:</strong> University of North Dakota</p>
+          <p><strong>Research Focus:</strong> Photonic Integrated Circuits</p>
+          <p><strong>Location:</strong> Grand Forks, North Dakota, USA</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2 class="section-title">About</h2>
+      <div class="card">
+        <p>I am Md Sanowar Hossain, a PhD student in Electrical Engineering at the University of North Dakota. My research focuses on photonic integrated circuits, silicon photonics, reconfigurable PICs, optical signal processing, and machine learning-assisted photonics. My background includes silicon nitride optical filter design, microwave photonics, photonic device simulation, and layout development using tools such as Lumerical, GDSFactory, and IPKISS.</p>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2 class="section-title">Research Interests</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Primary Areas</h3>
+          <div class="tag-list">
+            <span class="tag">Photonic Integrated Circuits</span>
+            <span class="tag">Reconfigurable PICs</span>
+            <span class="tag">Neuromorphic Computing using PICs</span>
+            <span class="tag">Nanophotonics</span>
+            <span class="tag">Optoelectronic Devices</span>
+            <span class="tag">Optical Signal Processing</span>
+            <span class="tag">Machine Learning in Photonics</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Additional Areas</h3>
+          <div class="tag-list">
+            <span class="tag">Metamaterials</span>
+            <span class="tag">THz Communications</span>
+            <span class="tag">Biomedical Devices</span>
+            <span class="tag">VLSI</span>
+            <span class="tag">Semiconductor Electronics</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2 class="section-title">Education</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>PhD in Electrical Engineering</h3>
+          <p class="meta">University of North Dakota | January 2026 – Present</p>
+          <p>School of Electrical Engineering and Computer Science, College of Engineering and Mines. Research focus: Photonic Integrated Circuits.</p>
+        </div>
+        <div class="card">
+          <h3>BSc in Electrical & Electronic Engineering</h3>
+          <p class="meta">Rajshahi University of Engineering and Technology | January 2020 – July 2025</p>
+          <ul>
+            <li>CGPA: 3.75/4.00</li>
+            <li>Last Semester CGPA: 4.00/4.00</li>
+            <li>Class Rank: 23rd out of 180 students</li>
+            <li>Thesis: Low Insertion Loss, High Extinction Ratio Optical SiN Half-Band Filter at 193 THz for Microwave Photonics Applications</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2 class="section-title">Research Experience</h2>
+      <div class="card">
+        <h3>Graduate Research Assistant</h3>
+        <p class="meta">University of North Dakota | January 2026 – Present | Grand Forks, ND</p>
+        <p><strong>Supervisor:</strong> Dr. M. Jobayer Hossain, Tenure-Track Assistant Professor, Department of Electrical Engineering</p>
+        <ul>
+          <li>Conducting research on photonic integrated circuits for advanced optical and microwave photonics applications.</li>
+          <li>Developing programmable photonic integrated circuit designs using simulation and layout tools.</li>
+          <li>Using Lumerical MODE, FDTD, and INTERCONNECT for photonic device and circuit simulations.</li>
+          <li>Designing photonic circuit layouts using IPKISS and GDSFactory.</li>
+        </ul>
+      </div>
+      <br />
+      <div class="card">
+        <h3>Undergraduate Researcher</h3>
+        <p class="meta">Rajshahi University of Engineering and Technology | October 2023 – June 2025 | Rajshahi, Bangladesh</p>
+        <p><strong>Supervisors:</strong> Dr. G.K.M. Hasanuzzaman and Georgios Charalambous</p>
+        <ul>
+          <li>Designed and simulated low-insertion-loss, high extinction-ratio optical SiN half-band filters operating at 193 THz for microwave photonics applications.</li>
+          <li>Developed waveguides, directional couplers, ring resonators, and optical filters using Lumerical MODE, FDTD, and INTERCONNECT.</li>
+          <li>Automated photonic simulations and data analysis using Lumerical scripting.</li>
+          <li>Designed photonic circuit layouts using the Python-based GDSFactory library.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2 class="section-title">Publications</h2>
+      <div class="card">
+        <div class="publication">
+          <span class="label">Journal Publication</span>
+          <p>MTM Md Tanvir Mahtab Tulon, Mahmudul Hasan Jewel, Md Sanowar Hossain, Mostafizur Rahman Rana, and Mahdy Rahman Chowdhury, “Optical pulling force on both right-handed and left-handed chiral particles above a complementary metamaterial,” <em>Applied Physics Letters</em>, vol. 127, no. 6, p. 061704, 2025. DOI: <a href="https://doi.org/10.1063/5.0274198" target="_blank" rel="noopener">10.1063/5.0274198</a>.</p>
+        </div>
+        <div class="publication">
+          <span class="label">Conference Publication</span>
+          <p>M. S. Hossain, G. K. M. Hasanuzzaman, G. Charalambous, et al., “SiN Based IIR Elliptic Half Band Filter at 193 THz with Low Insertion Loss and High Extinction Ratio,” in <em>2025 IEEE International Conference on Telecommunications and Photonics (ICTP)</em>, Dhaka, Bangladesh, 2025, pp. 111–115. DOI: <a href="https://doi.org/10.1109/ICTP68765.2025.11415033" target="_blank" rel="noopener">10.1109/ICTP68765.2025.11415033</a>.</p>
+        </div>
+        <div class="publication">
+          <span class="label">Under Review</span>
+          <p>M. S. Hossain and M. J. Hossain, “4-bit Photonic Analog-to-Digital Converter on a 300 mm Silicon Photonics Platform,” under review for the 2026 IEEE Photonics Conference (IPC).</p>
+        </div>
+        <div class="publication">
+          <span class="label">Under Review</span>
+          <p>M. S. Hossain and M. J. Hossain, “Optical Phase Array & Linearly Apodized Grating Antennas for On-chip Light Detection & Ranging,” under review for the 2026 IEEE Photonics Conference (IPC).</p>
+        </div>
+        <div class="publication">
+          <span class="label">Under Review</span>
+          <p>M. S. Hossain, G. K. M. Hasanuzzaman, et al., “Low Insertion Loss, High Extinction Ratio Optical SiN Half-Band FIR Maximally Flat Top Filter at 193 THz for Microwave Photonics Applications Using Lumerical Simulation,” under review at an IEEE journal.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <h2 class="section-title">Work Experience</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>AI Coding Trainer</h3>
+          <p class="meta">Outlier AI | July 2024 – December 2024 | Remote</p>
+          <ul>
+            <li>Worked on AI coding and technical evaluation tasks for large language model training.</li>
+            <li>Evaluated AI-generated coding responses for correctness, reasoning quality, and instruction alignment.</li>
+            <li>Contributed to prompt engineering and analytical problem-solving tasks involving programming and technical content.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Native AI Language Trainer</h3>
+          <p class="meta">Outlier AI | May 2024 – July 2024 | Remote</p>
+          <ul>
+            <li>Worked on AI language training projects involving prompt writing, response evaluation, and instruction-following analysis.</li>
+            <li>Evaluated and improved AI-generated responses for clarity, factual accuracy, and language quality.</li>
+            <li>Contributed to large language model training workflows through response justification and analytical review tasks.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Industrial Trainee Intern</h3>
+          <p class="meta">Ashuganj Power Station Company Ltd. | May 2024 – July 2024</p>
+          <ul>
+            <li>Completed industrial training on combined cycle power plant operation.</li>
+            <li>Gained exposure to gas insulated substations, control systems, transmission systems, and power generation infrastructure.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>IoT-Based Patient Health Monitoring System Using ESP32</h3>
+          <p class="meta">Research Project | 2025</p>
+          <p>Designed an ESP32-based real-time health monitoring system to measure room temperature, humidity, body temperature, heart rate, and SpO₂ using DHT11, DS18B20, and MAX30100 sensors.</p>
+        </div>
+        <div class="card">
+          <h3>Step-to-Growth Analysis Using Arduino Nano 33 BLE Sense</h3>
+          <p class="meta">Research Project | 2024</p>
+          <p>Developed a system to track animal locomotion and correlate activity levels with growth for animal health, wellness, and behavioral studies.</p>
+        </div>
+        <div class="card">
+          <h3>Astable Multivibrator Using 555 Timer</h3>
+          <p class="meta">Electronics Project | 2023</p>
+          <p>Designed an astable multivibrator circuit using a 555 timer, resistors, and a capacitor to generate clock pulses and audio-frequency signals.</p>
+        </div>
+        <div class="card">
+          <h3>Arduino-Based Line Follower Robot</h3>
+          <p class="meta">Robotics Project | 2023</p>
+          <p>Built a line follower robot using Arduino Uno and IR sensors with basic automation and control logic for autonomous path following.</p>
+        </div>
+        <div class="card">
+          <h3>Python-Based Database System</h3>
+          <p class="meta">Programming Project | 2023</p>
+          <p>Developed a database system using Python for data organization, retrieval, and manipulation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="grid three">
+        <div class="card">
+          <h3>Photonics & Simulation</h3>
+          <p>Lumerical MODE, Lumerical FDTD, Lumerical INTERCONNECT, COMSOL Multiphysics, OptiSystem</p>
+        </div>
+        <div class="card">
+          <h3>Layout & Design</h3>
+          <p>GDSFactory, IPKISS, Microwind, Multisim, ExpressPCB, EdrawMax, LOGO!Soft Comfort, EdSim51DI</p>
+        </div>
+        <div class="card">
+          <h3>Programming</h3>
+          <p>Python, C, MATLAB, Assembly Language, Machine Learning</p>
+        </div>
+        <div class="card">
+          <h3>Hardware Platforms</h3>
+          <p>Arduino, ESP32, Arduino Nano 33 BLE Sense</p>
+        </div>
+        <div class="card">
+          <h3>Documentation</h3>
+          <p>Overleaf, LaTeX, MS Word, MS PowerPoint, MS Excel, MS Visio</p>
+        </div>
+        <div class="card">
+          <h3>Test Scores</h3>
+          <p>GRE: Quantitative 163, Verbal 140, Overall 303<br />IELTS: L 6.0, R 6.0, W 6.0, S 6.0, Overall 6.0</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="activities">
+      <h2 class="section-title">Memberships, Activities & Awards</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Professional Memberships</h3>
+          <ul>
+            <li>Member, Institute of Electrical and Electronics Engineers (IEEE)</li>
+            <li>Member, AERO Team, University of North Dakota</li>
+            <li>Member, Association of Energy Engineers UND Student Chapter</li>
+            <li>Member, Bangladesh Student Association, University of North Dakota</li>
+            <li>Member, Cyber Hawks, University of North Dakota</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Professional Activities</h3>
+          <ul>
+            <li>Conference Reviewer, 2026 International Conference on Engineering and Frontier Technologies (ICEFronT)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Certifications</h3>
+          <ul>
+            <li>VM-Lab IPSL: Integrated Photonics Simulation Library, AIM Photonics</li>
+            <li>Signal Processing Python for Neuroscience Practical Course, Udemy</li>
+            <li>Introduction to Programming with MATLAB, Coursera</li>
+            <li>Python: Master Programming and Development with 15 Projects, Udemy</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Awards & Leadership</h3>
+          <ul>
+            <li>5th position, Precise Energy Olympiad 2022</li>
+            <li>Technical Scholarship, RUET</li>
+            <li>Class Representative, Department of EEE, RUET</li>
+            <li>Teacher, Physics Department, Science Coaching</li>
+            <li>Volunteer for Bangladesh</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-box">
+        <h3>Let’s connect</h3>
+        <p>Email: <a href="mailto:mdsanowar.hossain@und.edu">mdsanowar.hossain@und.edu</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/eeeengrsanowar/" target="_blank" rel="noopener">linkedin.com/in/eeeengrsanowar</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Md Sanowar Hossain. Built as an academic research portfolio.</p>
+    </div>
+  </footer>
+</body>
+</html>
